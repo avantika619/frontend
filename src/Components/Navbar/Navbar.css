@@ -1,0 +1,343 @@
+/* Navbar.css */
+*{
+  margin: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+  }
+  
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .nav-logo p {
+    color: #1f1e1e;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .nav-logo img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .nav-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+  }
+  
+  .nav-menu hr {
+    border: none;
+    width: 60%;
+    height: 3px;
+    border-radius: 10px;
+    background: red;
+  }
+  
+  .nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-login-cart button {
+    width: 120px;
+    height: 40px;
+    outline: none;
+    border: 1px solid rgb(225, 182, 182);
+    border-radius: 20px;
+    color: rgb(211, 155, 155);
+    font-size: 14px;
+    font-weight: 500;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .nav-login-cart button:active {
+    background: #d19191;
+    color: white;
+  }
+  
+  .nav-login-cart img {
+    max-width: 50px;
+  }
+  
+  .nav-cart-count {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: -55px;
+    border-radius: 11px;
+    font-size: 14px;
+    background: red;
+    color: white;
+  }
+  
+  .nav-search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-search form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-search input {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+  
+  .nav-search button {
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background: white;
+    margin-top: -5px;
+  }
+  
+  .nav-wishlist {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: red; /* Red color for the wishlist button */
+  }
+  
+  /* WishlistModal.css */
+  
+  .wishlist-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+  
+  .wishlist-modal button {
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    background: white;
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .marquee-container {
+    background-color: red; /* Red background for the marquee */
+    color: white;
+    margin-top: 2px;
+  }
+/*  
+.image-slider-container {
+    width: 80%; 
+    margin: auto; 
+    position: relative; 
+  }
+  
+  .slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+  }
+  
+  .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .slick-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 50px; 
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+  
+  .slick-prev {
+    left: 0;
+  }
+  
+  .slick-next {
+    right: 0;
+  }
+  
+  .slick-prev:hover,
+  .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.7); 
+  }
+  
+  .slick-prev span,
+  .slick-next span {
+    display: none;
+  }
+  
+  .slick-prev:after,
+  .slick-next:after {
+    content: 'Previous'; 
+    display: block;
+  }
+  
+  .slick-prev:hover span,
+  .slick-next:hover span {
+    display: none;
+  }
+  
+  .slick-prev:hover:after,
+  .slick-next:hover:after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    content: '';
+  }
+  
+  .slick-prev:before {
+    content: '\2190'; 
+  }
+  
+  .slick-next:before {
+    content: '\2192'; 
+  }
+  
+  .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .slick-dots li {
+    margin: 0 5px;
+  }
+  
+  .slick-dots button {
+    font-size: 10px;
+    cursor: pointer;
+    color: #000; 
+    padding: 5px;
+  }
+  
+  .slick-dots .slick-active button {
+    color: #fff; 
+    background-color: #000;  
+    border-radius: 50%;
+  }
+  
+  
+  .slick-slide img {
+    width: 100%;
+    height: auto;
+  }
+ */
+ .image-slider-container{
+  height: 100vh;
+  background: linear-gradient(180deg, #fbe4f8, #e1ffea22 60%);
+  display: flex;
+ }
+ .left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 180px;
+  line-height:1.1;
+ }
+ .left h2{
+  color: #090909;
+  font-size: 26px;
+  font-weight: 600;
+ }
+ .left p{
+  color: #171717;
+  font-size: 80px;
+  font-weight: 650;
+ }
+ .left .latest-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 310px;
+  height: 70px;
+  border-radius: 75px;
+  margin-top: 30px;
+  background: #ff414f;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+ }
+
+ .right{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 

@@ -1,0 +1,70 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* reduce the gap between items */
+    /* background: #a18074; */
+  }
+  .f-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* reduce the gap between image and text */
+  }
+  
+  .f-logo img {
+    width: 100px; /* set the width of the image */
+    height: auto; /* maintain the aspect ratio */
+  }
+  
+  .f-logo p {
+    color: black;
+    font-size: 26px; /* reduce the font size */
+    font-weight: 700;
+  }
+  
+  .footer-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #252525;
+    font-size: 16px; /* reduce the font size */
+  }
+  
+  .footer-links li {
+    cursor: pointer;
+  }
+  
+  
+  .f-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* reduce the gap between items */
+    width: 100%;
+    margin-bottom: 20px; /* reduce the margin */
+    color: #252525;
+    font-size: 20px;
+  }
+  
+  .f-copyright hr {
+    width: 60%; /* reduce the width */
+    border: none;
+    border-radius: 5px; /* reduce the border radius */
+    height: 2px; /* reduce the height */
+    background: #c7c7c7;
+  }
+  /* Add your existing styles here */
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .social-icons svg {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #333; /* Adjust the color as needed */
+  }
+  
